@@ -9,7 +9,6 @@
 
 import { tw } from 'twind';
 import React, { useState } from 'react';
-import classNames from 'classnames';
 import Link from 'next/link.js';
 import { quiz } from './data.js';
 
@@ -84,7 +83,7 @@ const QuizSection = () => {
               <li
                 key={idx}
                 onClick={() => onAnswerSelected(answer, idx)}
-                className={classNames({ list: selectedAnswerIndex === idx ? `list-selected` : `list-hover` })}
+                className={`list ${selectedAnswerIndex === idx ? `list-selected` : `list-hover`}`}
               >
                 <span>{answer}</span>
               </li>

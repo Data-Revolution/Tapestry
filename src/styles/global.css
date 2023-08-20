@@ -49,8 +49,8 @@ main {
   }
   
   .list-selected {
+    background-color: #D97706;
     color: #fff;
-    background-color: #000925;
   }
   
   .container {
