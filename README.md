@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/screenshot.png" alt="Screenshot">
+  <img src="src/constants/svg/Tapestry_text_dark.svg" alt="Tapestry Logo">
 </p>
 <br>
 
@@ -7,7 +7,7 @@ Based on<a href="https://github.com/jkytoela/next-startd"> next-startd </a> by <
 
 <a href="https://www.datarevolution.team">Live here</a>
 
-<p>This project waas made as part of GovHAck 2023. Further information of the project can be found</p><a href="https://hackerspace.govhack.org/team_management/teams/2193"> here.</a>
+This project was made as part of GovHack 2023. Further information of the project can be found<a href="https://hackerspace.govhack.org/team_management/teams/2193"> here.</a>
 
 - ⚡ **Next.js** — The React Framework
 - 🔥 **next-seo** — Manage SEO easily
