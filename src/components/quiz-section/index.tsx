@@ -1,6 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/no-array-index-key */
-/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/button-has-type */
 
 'use client';
 
@@ -8,7 +11,6 @@ import { tw } from 'twind';
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import Link from 'next/link.js';
-// eslint-disable-next-line import/extensions
 import { quiz } from './data.js';
 
 const QuizSection = () => {
@@ -76,7 +78,7 @@ const QuizSection = () => {
         {!showResult ? (
           <div className="quiz-container">
             <h3>{questions[activeQuestion].question}</h3>
-            {/* <img src={questions[activeQuestion].image}></img> */}
+            <img src={questions[activeQuestion].image} />
             {answers.map((answer, idx) => (
               // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
               <li
