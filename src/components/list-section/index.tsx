@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 

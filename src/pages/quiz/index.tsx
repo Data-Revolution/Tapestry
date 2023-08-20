@@ -6,10 +6,7 @@ import QuizSection from '@/components/quiz-section';
 export default function Home() {
   return (
     <Page>
-      <NextSeo
-        title="Tapestry Quiz"
-        description="Play the quiz game now"
-      />
+      <NextSeo title="Tapestry Quiz" description="Play the quiz game now" />
       <main>
         <QuizSection />
       </main>

@@ -1,16 +1,19 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/button-has-type */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 'use client';
 
-import { tw } from "twind";
-import { quiz } from './data.js';
+import { tw } from 'twind';
 import React, { useState } from 'react';
-import classNames from "classnames";
-import Link from "next/link.js";
-
-
+import classNames from 'classnames';
+import Link from 'next/link.js';
+// eslint-disable-next-line import/extensions
+import { quiz } from './data.js';
 
 const QuizSection = () => {
   const [activeQuestion, setActiveQuestion] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedAnswer, setSelectedAnswer] = useState(``);
   const [checked, setChecked] = useState(false);
   const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const [showResult, setShowResult] = useState(false);
@@ -29,10 +32,10 @@ const QuizSection = () => {
     setSelectedAnswerIndex(idx);
     if (answer === correctAnswer) {
       setSelectedAnswer(true);
-      console.log('true');
+      console.log(`true`);
     } else {
       setSelectedAnswer(false);
-      console.log('false');
+      console.log(`false`);
     }
   };
 
@@ -49,7 +52,7 @@ const QuizSection = () => {
         : {
             ...prev,
             wrongAnswers: prev.wrongAnswers + 1,
-          }
+          },
     );
     if (activeQuestion !== questions.length - 1) {
       setActiveQuestion((prev) => prev + 1);
@@ -61,43 +64,42 @@ const QuizSection = () => {
   };
 
   return (
-    <div className='container'>
+    <div className="container">
       <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>Todays Challenge</p>
       <div>
-        <h2 className={tw('text-center')}>
+        <h2 className={tw(`text-center`)}>
           Question: {activeQuestion + 1}
           <span>/{questions.length}</span>
         </h2>
       </div>
       <div>
         {!showResult ? (
-          <div className='quiz-container'>
+          <div className="quiz-container">
             <h3>{questions[activeQuestion].question}</h3>
             {/* <img src={questions[activeQuestion].image}></img> */}
             {answers.map((answer, idx) => (
+              // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
               <li
                 key={idx}
                 onClick={() => onAnswerSelected(answer, idx)}
-                className={classNames({'list' :
-                  selectedAnswerIndex === idx ? 'list-selected' : 'list-hover'
-            })}
+                className={classNames({ list: selectedAnswerIndex === idx ? `list-selected` : `list-hover` })}
               >
                 <span>{answer}</span>
               </li>
             ))}
             {checked ? (
-              <button onClick={nextQuestion} className='button'>
-                {activeQuestion === question.length - 1 ? 'Finish' : 'Next'}
+              <button onClick={nextQuestion} className="button">
+                {activeQuestion === question.length - 1 ? `Finish` : `Next`}
               </button>
             ) : (
-              <button onClick={nextQuestion} disabled className='btn-disabled'>
-                {' '}
-                {activeQuestion === question.length - 1 ? 'Finish' : 'Next'}
+              <button onClick={nextQuestion} disabled className="btn-disabled">
+                {` `}
+                {activeQuestion === question.length - 1 ? `Finish` : `Next`}
               </button>
             )}
           </div>
         ) : (
-          <div className='quiz-container'>
+          <div className="quiz-container">
             <h3>Results</h3>
             <h3>Overall {(result.score / 25) * 100}%</h3>
             <p>
@@ -112,12 +114,16 @@ const QuizSection = () => {
             <p>
               Wrong Answers: <span>{result.wrongAnswers}</span>
             </p>
-            <Link href='./account' ><button className='button'>Claim <span>{result.score} Tokens</span></button></Link>
+            <Link href="./account">
+              <button className="button">
+                Claim <span>{result.score} Tokens</span>
+              </button>
+            </Link>
           </div>
         )}
       </div>
     </div>
   );
-        };
-    
-    export default QuizSection;
+};
+
+export default QuizSection;

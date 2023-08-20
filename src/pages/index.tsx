@@ -8,10 +8,7 @@ import Footer from '@/components/footer';
 export default function Home() {
   return (
     <Page>
-      <NextSeo
-        title="Tapestry"
-        description=""
-      />
+      <NextSeo title="Tapestry" description="" />
       <Header />
       <main>
         <VideoSection />
