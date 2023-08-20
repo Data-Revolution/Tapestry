@@ -4,19 +4,20 @@ import Preferences from '@/constants/svg/preferences.svg';
 import Play from '@/constants/svg/play.svg';
 
 const PlayButton = () => (
-  <button
-    type="button"
-    className={tw(
-      `w-64 lg:w-auto absolute top-full left-1/2 flex items-center transform
+  <a target="_blank" href="https://youtu.be/joaSbhILogA">
+    <button
+      type="button"
+      className={tw(
+        `w-64 lg:w-auto absolute top-full left-1/2 flex items-center transform
       -translate-y-1/2 -translate-x-1/2 bg-white rounded-full font-medium group p-4 shadow-xl`,
-    )}
-    aria-label="play video"
-  >
-    <Play className={tw(`w-6 h-6 fill-current text-gray-400 group-hover:text-yellow-600 flex-shrink-0`)} />
-    <a target="_blank" href="https://youtu.be/joaSbhILogA">
+      )}
+      aria-label="play video"
+    >
+      <Play className={tw(`w-6 h-6 fill-current text-gray-400 group-hover:text-yellow-600 flex-shrink-0`)} />
+
       <span className={tw(`ml-3`)}>Watch the video (3 min)</span>
-    </a>
-  </button>
+    </button>
+  </a>
 );
 
 const VideoSection = () => (
