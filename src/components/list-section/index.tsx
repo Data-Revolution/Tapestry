@@ -3,22 +3,16 @@ import FeatureSvg from '@/constants/svg/features.svg';
 
 const listItems = [
   {
-    title: `Designers`,
-    description: `Officia et fugiat mollit qui. Dolor elit aliqua voluptate ipsum
-    excepteur cillum consequat consectetur duis magna qui eu consequat occaecat.
-    Deserunt nisi sit.`,
+    title: `Tourism Operators`,
+    description: `Enhance the gamified solution by designing captivating experiences and challenges that showcase the diversity of South Australia's attractions. They offer rewards such as discounts and exclusive access, motivating participants to explore various activities like eco-adventures, cultural events, and wildlife encounters.`,
   },
   {
-    title: `Developers`,
-    description: `Pariatur consectetur laboris exercitation duis laboris.
-    Commodo duis fugiat magna fugiat et ut anim elit. Tempor aute ex qui
-    tempor tempor.`,
+    title: `Accomodation Providers`,
+    description: `Contribute by offering themed stays that align with different aspects of South Australia's tourism, such as beach getaways or outback adventures. They also collaborate with other stakeholders to create joint promotions, encouraging participants to choose accommodations based on their interests and providing a unique way to experience the region.`,
   },
   {
-    title: `Product owners`,
-    description: `Ullamco consectetur ipsum eiusmod nisi adipisicing sint anim
-    dolore aute excepteur. Voluptate ea ullamco sunt eu elit qui aliquip.
-    Adipisicing.`,
+    title: `Heritige Custodians`,
+    description: `Play a vital role by providing historical content, stories, and virtual tours that highlight the region's cultural heritage. Through interactive storytelling and augmented reality features, they engage participants in an immersive exploration of historical sites, both remotely and in person, enhancing the overall understanding and appreciation of South Australia's heritage.`,
   },
 ];
 

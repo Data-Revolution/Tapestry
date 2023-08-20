@@ -19,11 +19,11 @@ const links = [
   },
   {
     label: `Quiz`,
-    href: `/`,
+    href: `/quiz`,
   },
   {
     label: `Account`,
-    href: `/`,
+    href: `/account`,
   },
 ];
 

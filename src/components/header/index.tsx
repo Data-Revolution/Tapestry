@@ -1,9 +1,6 @@
 import { tw, css } from 'twind/css';
 import Button from '@/components/button';
-import Netlify from '@/constants/svg/netlify.svg';
-import Nike from '@/constants/svg/nike.svg';
-import Figma from '@/constants/svg/figma.svg';
-import Aws from '@/constants/svg/aws.svg';
+import Link from 'next/link';
 
 const headerStyle = css`
   background-color: #ffffff;
@@ -23,9 +20,11 @@ const Header = () => (
         </p>
       </div>
       <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto pt-10`)}>
-        <Button primary>Play the Quiz</Button>
+        <Link href='./quiz'><Button primary>Play the Quiz</Button></Link>
+        
         <span className={tw(`mx-2`)}>or</span>
-        <Button>Login</Button>
+        <Link href='./account'><Button>Login</Button></Link>
+        
       </div>
     </div>
   </header>
